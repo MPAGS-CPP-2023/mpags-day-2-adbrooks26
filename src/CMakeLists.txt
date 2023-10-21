@@ -16,6 +16,7 @@ add_executable(mpags-cipher
 	mpags-cipher.cpp
 	MPAGSCipher/TransformChar.cpp
 	MPAGSCipher/ProcessCmdLine.cpp
+	MPAGSCipher/RunCaesarCipher.cpp
 	)
 
 target_include_directories(mpags-cipher

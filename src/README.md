@@ -20,6 +20,15 @@ $ g++ -std=c++11 -Wall -Wextra -Werror -Wfatal-errors -pedantic -Wshadow -o mpag
 $ ./mpags-cipher
 ```
 
+or 
+
+```
+$ ls
+MPAGSCipher/       CMakeLists.txt        LICENSE          README.md        mpags-cipher.cpp  
+$ make
+$ ./mpags-cipher
+```
+
 If no input file is supplied, `mpags-cipher` will wait for user input
 from the keyboard until RETURN followed by CTRL-D are pressed.
 To ensure the input text can be used with the character sets known to
@@ -37,8 +46,10 @@ The results of this transliteration are output after CTRL-D.
 ├── MPAGSCipher/                      Subdirectory for storing functions and header files
     ├── ProcessCmdLine.cpp            ProcessCmdLine function C++ source file
     ├── ProcessCmdLine.hpp            ProcessCmdLine header file
+    ├── RunCaesarCipher.cpp           Caesar cipher encryption and decryption function C++ source file
+    ├── RunCaesarCipher.hpp           Caesar cipher function header file
     ├── TransformChar.cpp             TransformChar function C++ source file
-    ├── TransformChar.hpp             TransformChar header file
+    └── TransformChar.hpp             TransformChar header file
 ├── CMakeLists.txt                    CMake file
 ├── LICENSE                           License file, in our case MIT
 ├── mpags-cipher.cpp                  Main program C++ source file
