@@ -15,8 +15,17 @@ To build from a clone of this repository, open a terminal window
 and change directory into that holding this README. Then run:
 ```
 $ ls
-LICENSE          README.md        mpags-cipher.cpp
+MPAGSCipher/       CMakeLists.txt        LICENSE          README.md        mpags-cipher.cpp  
 $ g++ -std=c++11 -Wall -Wextra -Werror -Wfatal-errors -pedantic -Wshadow -o mpags-cipher mpags-cipher.cpp
+$ ./mpags-cipher
+```
+
+or 
+
+```
+$ ls
+MPAGSCipher/       CMakeLists.txt        LICENSE          README.md        mpags-cipher.cpp  
+$ make
 $ ./mpags-cipher
 ```
 
@@ -34,9 +43,17 @@ The results of this transliteration are output after CTRL-D.
 ## Source code layout
 ```
 .
-├── LICENSE             License file, in our case MIT
-├── mpags-cipher.cpp    Main program C++ source file
-└── README.md           This file, describes the project
+├── MPAGSCipher/                      Subdirectory for storing functions and header files
+    ├── ProcessCmdLine.cpp            ProcessCmdLine function C++ source file
+    ├── ProcessCmdLine.hpp            ProcessCmdLine header file
+    ├── RunCaesarCipher.cpp           Caesar cipher encryption and decryption function C++ source file
+    ├── RunCaesarCipher.hpp           Caesar cipher function header file
+    ├── TransformChar.cpp             TransformChar function C++ source file
+    └── TransformChar.hpp             TransformChar header file
+├── CMakeLists.txt                    CMake file
+├── LICENSE                           License file, in our case MIT
+├── mpags-cipher.cpp                  Main program C++ source file
+└── README.md                         This file, describes the project
 ```
 
 ## Copying
